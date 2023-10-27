@@ -53,8 +53,8 @@ image:images/lab2.1-showlabels.png[]
 [source]
 ----
 
-[localhost ~]$ oc project proj-c
-[localhost ~]$ oc new-app quay.io/bkozdemb/hello --name="hello"
+oc project proj-c
+oc new-app quay.io/bkozdemb/hello --name="hello"
 
 ----
 This will create a new app, which is a 'hello world' container based on image stored in quay.io that’s built on the RHEL base python image. It runs a simple web server that prints 'hello'.
@@ -74,8 +74,7 @@ image:images/lab2.1-ocgetpods.png[]
 [source]
 ----
 
-[localhost ~]$ oc run client --image=fedora --command -- tail -f /dev/null
-pod/client created
+oc run client --image=fedora --command -- tail -f /dev/null
 ----
 
 . Let's confirm that our client pod and hello world pod are now running.
@@ -93,10 +92,10 @@ image:images/lab2.1-ocgetpods2.png[]
 [source]
 ----
 
-[localhost ~]$ oc project proj-b
-[localhost ~]$ oc run client  --image=fedora --command -- tail -f /dev/null
-[localhost ~]$ oc project proj-a
-[localhost ~]$ oc run client  --image=fedora --command -- tail -f /dev/null
+oc project proj-b
+oc run client  --image=fedora --command -- tail -f /dev/null
+oc project proj-a
+oc run client  --image=fedora --command -- tail -f /dev/null
 
 ----
 
@@ -167,8 +166,7 @@ Now let's take a look at the default Network Policies in the OpenShift web conso
 +
 [source]
 ----
-[localhost ~]$ oc whoami --show-console
-https://console-openshift-console.apps.cluster-tx8sn.tx8sn.sandbox1590.opentlc.com
+oc whoami --show-console
 ----
 
 . Log into the OpenShift web console, then go to Projects and find the project, *proj-c*. Navigate into *proj-c*, then select *Networking* -> *Network Policies*.
@@ -237,8 +235,9 @@ image:images/lab2.3-policies-list.png[]
 +
 [source]
 ----
-[localhost ~]$ oc rsh ${POD}
-sh-5.0# curl -v hello.proj-c:8080
+oc rsh ${POD}
+#Inside the pod you have to execute:
+curl -v hello.proj-c:8080
 ----
 +
 image:images/lab2.3-curl-from-proj-a-ok.png[]
@@ -247,8 +246,9 @@ image:images/lab2.3-curl-from-proj-a-ok.png[]
 +
 [source]
 ----
-[localhost ~]$ oc rsh ${POD}
-sh-5.0# curl -v hello.proj-c:8080
+oc rsh ${POD}
+#Inside the pod you have to execute:
+curl -v hello.proj-c:8080
 ----
 +
 image:images/lab2.3-curl-from-proj-b-fails.png[]
