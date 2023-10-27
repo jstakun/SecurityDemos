@@ -22,9 +22,9 @@ Projects-a, b and c will all have a client application. The client from project-
 +
 [source]
 ----
-[localhost ~]$ oc new-project proj-a --display-name="Project A"
-[localhost ~]$ oc new-project proj-b --display-name="Project B"
-[localhost ~]$ oc new-project proj-c --display-name="Project C"
+oc new-project proj-a --display-name="Project A"
+oc new-project proj-b --display-name="Project B"
+oc new-project proj-c --display-name="Project C"
 
 ----
 
