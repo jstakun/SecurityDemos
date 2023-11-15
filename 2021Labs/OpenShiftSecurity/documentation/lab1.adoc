@@ -19,16 +19,9 @@ Almost all software you are running in your containers does not require 'root' l
 oc new-project userX-myproject
 ----
 
-. In the OpenShift console, switch to *Developer* prespective from Adminstrator in left upper corner, click on *+Add* menu item and click on the *Container Image* tile.
+. In the OpenShift console, switch to *Developer* prespective from Adminstrator in left upper corner, click on *+Add* menu item.
 +
 image:images/lab1.1-add_workload.jpg[]
-
-. Then, go to the *Workloads* tab and click on the *Container Image* tile.
-+
-image:images/lab1.1-4.7.33-workloads.png[]
-
-
-  NOTE: It may be easier to use *Developer* perspective of OpenShift console to navigate to a project and click "+Add" button on the left hand side menu  to initiate that workflow.
   
 . Then, click on *Container Images* . Make sure that *Image name from external registry* is selected and for the Image Name, type *docker.io/httpd*. Press the magnifying glass.
 +
