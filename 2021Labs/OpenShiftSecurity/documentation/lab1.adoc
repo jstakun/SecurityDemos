@@ -19,9 +19,9 @@ Almost all software you are running in your containers does not require 'root' l
 oc new-project userX-myproject
 ----
 
-. In the OpenShift console, navigate to *Home->Projects*, search for *userX-myproject* and click on it.
+. In the OpenShift console, switch to *Developer* prespective from Adminstrator in left upper corner, click on *+Add* menu item and click on the *Container Image* tile.
 +
-image:images/lab1.1-myproject.png[]
+image:images/lab1.1-add_workload.jpg[]
 
 . Then, go to the *Workloads* tab and click on the *Container Image* tile.
 +
